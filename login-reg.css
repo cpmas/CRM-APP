@@ -87,7 +87,7 @@
 
   .register-link a {
     text-decoration: underline;
-    color: #5eb7e0;
+    color: #aad2e5;
   }
   .register-link a:hover {
     text-decoration: underline;
@@ -100,9 +100,14 @@
   
   .forgot-password a {
     text-decoration: underline;
-    color: #8e6a6a; /* Or choose a color that fits your design */
+    color: #aad2e5; /* Or choose a color that fits your design */
   }
   
   .forgot-password a:hover {
     color: #ccc;
+  }
+
+  img {
+    width: 6rem;
+    height: auto;
   }
