@@ -1,7 +1,7 @@
 {
-  "name": "Client Tracker",
-  "short_name": "Client Tracker",
-  "start_url": "client-tracker.html",
+  "name": "Branchy",
+  "short_name": "Branchy",
+  "start_url": "login.html",
   "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
