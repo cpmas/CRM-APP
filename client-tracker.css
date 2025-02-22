@@ -328,11 +328,10 @@ footer {
   position: absolute;
   bottom: 0;
   padding: var(--gutter);
-  border-radius: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 4.3rem;
+  height: 4.5rem;
   z-index: 2;
 }
 
