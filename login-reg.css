@@ -140,8 +140,19 @@
   }
 
   input[type="checkbox"] {
-    height: 5px;
-    width:auto;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* adjust size as needed */
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin: 0;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #0a95b1;
+    border-color: #0a95b1;
   }
 
   
