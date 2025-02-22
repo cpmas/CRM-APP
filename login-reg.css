@@ -134,25 +134,45 @@
   }
 
 
-  #remember-email {
-    height: 12px;
-    width: 12px;
-  }
+  /* Hide the native checkbox but keep it accessible */
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 200px; /* adjust size as needed */
-    height: 200px;
-    border: 2px solid #000;
-    border-radius: 4px;
-    margin: 0;
-    vertical-align: middle;
-  }
-  
-  input[type="checkbox"]:checked {
-    background-color: #0a95b1;
-    border-color: #0a95b1;
-  }
+/* Style the label to leave room for the custom checkbox */
+.checkbox-container label {
+  position: relative;
+  padding-left: 20px; /* adjust to create space for the 9px box */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Create the custom checkbox with a 9px size */
+.checkbox-container label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 2px; /* adjust for rounded corners */
+  background: #fff;
+}
+
+/* When the checkbox is checked, change the styling */
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  background-color: #0a95b1;
+  border-color: #0a95b1;
+  /* Optionally, display a checkmark */
+  content: "\2713"; /* Unicode checkmark */
+  font-size: 7px;   /* scale the checkmark to fit inside 9px */
+  color: #fff;
+  text-align: center;
+  line-height: 9px;
+}
+
 
   
