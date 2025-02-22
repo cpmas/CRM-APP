@@ -323,7 +323,8 @@ h1 {
 
 footer {
   width: 100%;
-  background: #5eb7e0;
+  background: #00030E;
+  border: solid 2px #5eb7e0;
   color: #00030E;
   position: absolute;
   bottom: 0;
@@ -340,7 +341,7 @@ footer i {
 }
 
 footer a {
-  color: #fff; 
+  color: #5eb7e0; 
   text-decoration: none; 
   transition: color 0.3s ease; 
 }
