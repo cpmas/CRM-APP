@@ -156,9 +156,9 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 9px;
-  height: 9px;
-  border-radius: 2px; /* adjust for rounded corners */
+  width: 12px;
+  height: 12px;
+  border-radius: 2px; 
   background: #fff;
 }
 
@@ -166,9 +166,9 @@
 .checkbox-container input[type="checkbox"]:checked + label::before {
   background-color: #0a95b1;
   border-color: #0a95b1;
-  /* Optionally, display a checkmark */
+  /*display a checkmark */
   content: "\2713"; /* Unicode checkmark */
-  font-size: 7px;   /* scale the checkmark to fit inside 9px */
+  font-size: 7px;   
   color: #fff;
   text-align: center;
   line-height: 9px;
