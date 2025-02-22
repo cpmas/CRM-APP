@@ -168,7 +168,7 @@
   border-color: #0a95b1;
   /*display a checkmark */
   content: "\2713"; /* Unicode checkmark */
-  font-size: 7px;   
+  font-size: 11px;   
   color: #fff;
   text-align: center;
   line-height: 9px;
