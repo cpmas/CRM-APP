@@ -115,3 +115,25 @@
     height: auto;
     margin-bottom: -13px;
   }
+
+  /*checkbox*/
+
+  label[for="remember-email"] {
+    font-size: 0.8em; /* or use a pixel value like 12px */
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+
+  #remember-email {
+    width: auto;
+  }

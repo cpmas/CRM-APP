@@ -37,6 +37,10 @@
             <input type="password" id="password" placeholder="Enter your password" required>
           </div>
           <button type="submit" class="login-button">Login</button>
+          <div class="checkbox-container">
+            <input type="checkbox" id="remember-email" name="remember-email">
+            <label for="remember-email">Remember my email</label>
+          </div>
         </form>
         
         <div class="register-link">
@@ -48,6 +52,27 @@
       </div>
 
   <script>
+    // When the page loads, prepopulate the email input if a saved value exists
+    window.addEventListener("load", function() {
+      const savedEmail = localStorage.getItem("savedEmail");
+      if (savedEmail) {
+        document.getElementById("email").value = savedEmail;
+        document.getElementById("remember-email").checked = true;
+      }
+    });
+
+// On form submission, save or remove the saved email based on the checkbox state
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+    const emailInput = document.getElementById("email");
+    const rememberCheckbox = document.getElementById("remember-email");
+    if (rememberCheckbox.checked) {
+      localStorage.setItem("savedEmail", emailInput.value);
+    } else {
+      localStorage.removeItem("savedEmail");
+    }
+  });
+
+    
     document.getElementById('login-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
