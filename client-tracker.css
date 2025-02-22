@@ -7,13 +7,19 @@ html, body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #00030E;
   color: #fff;
   font-family: Arial, sans-serif;
 }
 
+#logo {
+  width: 6rem;
+  height: auto;
+  margin: -0.5rem;
+}
+
 #banner {
-  background-color: #b4edf8;
+  background-color: #00030E;
   margin-bottom: 1rem;
   position: relative;
   width: 100vw;
@@ -124,11 +130,11 @@ h1 {
 /* Stage Containers */
 .stage-container {
   margin-bottom: 2rem;
-  border: 2px solid #c6dbdf;
-  border-radius: 0.8rem;
+  border: 2px solid #333333;
+  border-radius: 1.2rem;
   padding: 1rem;
   position: relative;
-  background: #fff;
+  background: #00030E;
 }
 .stage-container h2 {
   margin: 0 0 1rem;
@@ -136,7 +142,7 @@ h1 {
   text-transform: capitalize;
   padding: 0 50px; /* Adjust the value as needed to give enough room */
   white-space: normal;
-  color: #3d3d3d;
+  color: #ffffff;
 }
 
 
@@ -150,7 +156,7 @@ h1 {
 
 /* Client Card */
 .client-card {
-  background-color: #dee8cc;
+  background-color: #222;
   padding: 1rem;
   border-radius: 0.8rem;
   width: 90%;
@@ -313,4 +319,37 @@ h1 {
 }
 #toggle-stage-controls-btn:hover {
   background: #a3a3a3;
+}
+
+footer {
+  width: 100%;
+  background: #fff;
+  color: #00030E;
+  position: absolute;
+  bottom: 0;
+  padding: var(--gutter);
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3.7rem;
+  z-index: 2;
+}
+
+footer i {
+  font-size: 2.2rem;
+}
+
+footer a {
+  color: #00030E; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+footer a:hover {
+  color: #f0f0f0; 
+}
+
+footer a.active {
+  color: #f0f0f0; 
 }
