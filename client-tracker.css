@@ -59,6 +59,7 @@ html, body {
   box-sizing: border-box;
   overflow-y: auto;
   padding-top: 0;
+  padding-bottom: 5rem;
 }
 
 /* Heading */
@@ -260,6 +261,12 @@ h1 {
   background-color: rgb(209, 242, 209);
   padding: 1rem 3rem;
 }
+
+#deleted-clients .client-card,
+#completed-clients .client-card {
+  margin-bottom: 1rem; 
+}
+
 
 /* Order and Edit Controls (hidden by default) */
 .order-controls {
