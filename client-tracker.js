@@ -27,12 +27,43 @@ toggleBtn.addEventListener('click', toggleStageControls);
 document.body.appendChild(toggleBtn);
 
 /* -----------------------------
+   Initialize Default Stages
+   If the user's stages subcollection is empty, add the default stages.
+----------------------------- */
+function initializeDefaultStages() {
+  const stagesRef = db.collection("users").doc(currentUserId).collection("stages");
+  stagesRef.get().then(querySnapshot => {
+    if (querySnapshot.empty) {
+      // Define default stages with a specific order
+      const defaultStages = [
+        { name: "First Contact", order: 0 },
+        { name: "Quote Booked", order: 1 },
+        { name: "Working on Quote", order: 2 },
+        { name: "Quote Accepted", order: 3 },
+        { name: "Date Booked", order: 4 },
+        { name: "In Progress", order: 5 }
+      ];
+      // Add each default stage to the user's stages collection
+      defaultStages.forEach(stage => {
+        stagesRef.add(stage)
+          .then(() => console.log(`Stage "${stage.name}" added`))
+          .catch(err => console.error("Error adding stage:", err));
+      });
+    }
+  });
+}
+
+/* -----------------------------
    Initialization: wait for the auth state to be ready.
-   Once the user is logged in, set currentUserId and start all listeners.
+   Once the user is logged in, set currentUserId, initialize default stages,
+   and start all listeners.
 ----------------------------- */
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     currentUserId = user.uid;
+    // Initialize default stages if they don't exist
+    initializeDefaultStages();
+    // Continue with fetching stages and setting up listeners
     fetchStages();
     listenActiveClients();
     listenDeletedClients();
